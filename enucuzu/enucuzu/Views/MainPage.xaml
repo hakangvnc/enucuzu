@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="enucuzu.MainPage"
+            xmlns:local ="clr-namespace:enucuzu.Views"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            android:TabbedPage.BarItemColor="DarkGray"
+            android:TabbedPage.BarSelectedItemColor="#208cba"
+            BackgroundColor="#ebf3ff">
+
+    <local:AddProduct Title="ÜRÜN EKLE" IconImageSource="plus.png"></local:AddProduct>
+    <local:DiscoverPage Title="KEŞFET" IconImageSource="magnifier.png"></local:DiscoverPage>
+    <local:MyListPage Title="LİSTEM" IconImageSource="list.png"></local:MyListPage>
+    <local:ProfilPage Title="PROFİL" IconImageSource="user.png"></local:ProfilPage>
+</TabbedPage>

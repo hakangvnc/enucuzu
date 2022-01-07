@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "660240296472",
+    "firebase_url": "https://enucuzu-v01-default-rtdb.firebaseio.com",
+    "project_id": "enucuzu-v01",
+    "storage_bucket": "enucuzu-v01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:660240296472:android:6e7e7abb04805feff5316d",
+        "android_client_info": {
+          "package_name": "com.companyname.enucuzu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "660240296472-1r1alqltt2btljnfgphijllgfsgqfkjp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaByD3b8GZbR6XAO55uqkpEQD6TtO4dHA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "660240296472-1r1alqltt2btljnfgphijllgfsgqfkjp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

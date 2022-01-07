@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="enucuzu.Views.ProfilPage" BackgroundColor="#ebf3ff">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="StartAndExpand">
+            <Frame BackgroundColor="Transparent" CornerRadius="10" Margin="5,5,5,0" Padding="5,20">
+                <StackLayout VerticalOptions="Center" Spacing="10" Padding="10">
+                    <Label Text="PROFİLİM" FontAttributes="Bold" FontSize="20" HorizontalOptions="Center"></Label>
+                    <StackLayout Orientation="Horizontal" Spacing="-5" Margin="10,0,10,10" >
+                        <StackLayout Spacing="10" WidthRequest="400" VerticalOptions="Center" Orientation="Horizontal">
+                            <StackLayout Orientation="Vertical" Spacing="5" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                                <Frame Padding="5" Margin="0,0,20,0" BackgroundColor="#ebf3ff">
+                                    <StackLayout  Orientation="Horizontal" Spacing="2" HorizontalOptions="Center">
+                                        <Label Text="Kullanıcı adı :" FontSize="Medium" ></Label>
+                                        <Label x:Name="k_Ad" Text="0" FontSize="Medium" FontAttributes="Bold"></Label>
+                                    </StackLayout>
+                                </Frame>
+                                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Margin="0,0,20,0">
+                                    <Frame WidthRequest="110" Padding="5" BackgroundColor="#ebf3ff" >
+                                        <StackLayout HorizontalOptions="Center">
+                                            <Label Text="TAKİP EDİLENLER" FontSize="12"/>
+                                            <Label x:Name="Takip" Text="7" FontSize="Title" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                                        </StackLayout>
+                                    </Frame>
+                                    <Frame WidthRequest="110" Padding="5" BackgroundColor="#ebf3ff">
+                                        <StackLayout HorizontalOptions="Center">
+                                            <Label Text="PAYLAŞIMLAR" FontSize="12"/>
+                                            <Label x:Name="Paylasim" Text="1" FontSize="Title" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout WidthRequest="95">
+                            <Frame CornerRadius="100" Padding="0" WidthRequest="95" HeightRequest="95" MinimumHeightRequest="95" MinimumWidthRequest="95">
+                                <Image x:Name="k_photo" Aspect="AspectFill" WidthRequest="70" HeightRequest="70" MinimumHeightRequest="70" MinimumWidthRequest="70"></Image>
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
+                    <Frame BackgroundColor="#ebf3ff" HeightRequest="700">
+                        <StackLayout Margin="5,0,5,0">
+                            <ListView ItemsSource="{Binding .}" x:Name="p_list" ItemTapped="p_list_ItemTapped" HasUnevenRows="True" Margin="0,10,0,10" SeparatorVisibility="None" SelectionMode="Single" >
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <Frame BackgroundColor="Transparent" BorderColor="#abd2ff" CornerRadius="15" Padding="10" Margin="0,0,0,5">
+                                                <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center" Margin="5">
+                                                    <StackLayout WidthRequest="75" VerticalOptions="Center">
+                                                        <Frame CornerRadius="100" Padding="0" WidthRequest="75" HeightRequest="75" MinimumHeightRequest="75" MinimumWidthRequest="75">
+                                                            <Image Source="{Binding Product_img}" Aspect="AspectFill" WidthRequest="60" HeightRequest="60" MinimumHeightRequest="60" MinimumWidthRequest="60"></Image>
+                                                        </Frame>
+                                                    </StackLayout>
+                                                    <StackLayout WidthRequest="250">
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <Label Text="{Binding Product_Name}" FontSize="Body" FontAttributes="Bold"></Label>
+                                                        </StackLayout>
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <Label Text=" Market :"></Label>
+                                                            <Label Text="{Binding Product_Store}"></Label>
+                                                        </StackLayout>
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <Label Text=" Barkod No :"></Label>
+                                                            <Label x:Name="_barkod"  Text="{Binding Barkod}"></Label>
+                                                        </StackLayout>
+                                                        <StackLayout Spacing="12" VerticalOptions="Center" HorizontalOptions="End">
+                                                            <StackLayout Orientation="Horizontal" HorizontalOptions="End" WidthRequest="100" >
+                                                                <Label Text="{Binding Product_Price}" FontSize="22" HorizontalTextAlignment="Center" FontAttributes="Bold" LineBreakMode="NoWrap"></Label>
+                                                                <Label Text="₺" FontSize="22" HorizontalTextAlignment="Center" FontAttributes="Bold" Margin="-5,0,0,0"></Label>
+                                                            </StackLayout>
+                                                        </StackLayout>
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </Frame>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackLayout>
+                    </Frame>
+                    <Button Text="Paylaşım Ayarları" HorizontalOptions="Fill" BackgroundColor="#abd2ff" CornerRadius="5"></Button>
+                    <Button Text="Hesap işlemleri" HorizontalOptions="Fill" BackgroundColor="#abd2ff" Clicked="Button_Clicked" CornerRadius="5"></Button>
+                    <Button Text="Çıkış Yap" HorizontalOptions="Fill" BackgroundColor="#abd2ff" Clicked="Log_Out" CornerRadius="5"></Button>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

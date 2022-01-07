@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="enucuzu.Views.AccountPage">
+    <ContentPage.Content>
+        <StackLayout Spacing="10" VerticalOptions="Center">
+            <Frame BackgroundColor="#c6e5ff" CornerRadius="10" Margin="20,0,20,0" Padding="0,0,0,0">
+                <StackLayout VerticalOptions="Center" Spacing="20" Padding="30,30,30,50">
+
+                    <Label Text="Hesap İşlemleri"  FontSize="35" HorizontalOptions="Center" TextColor="#4e4b45"/>
+                    <Button x:Name="foto_gör" TextColor="White" Margin="0,30,0,0" Text="Fotoğraf Değiştir" BackgroundColor="#abd2ff" CornerRadius="5" Clicked="foto_gör_Clicked"></Button>
+                    <StackLayout x:Name="foto_islem" Orientation="Vertical" HorizontalOptions="Center" IsVisible="False">
+                        <StackLayout Orientation="Horizontal">
+                            <Frame Padding="-5" HeightRequest="140" BackgroundColor="#ebf3ff" CornerRadius="100" >
+                                <Image x:Name="image" Source="usericon.png" HeightRequest="140" WidthRequest="140" BackgroundColor="Transparent"  Aspect="AspectFill"/>
+                        </Frame>
+                        <Frame Padding="-5" Margin="30,30,0,30" HeightRequest="80" BackgroundColor="#ebf3ff" CornerRadius="100" >
+                            <ImageButton x:Name="imagesec" Source="usericon.png" BackgroundColor="Transparent"  Aspect="AspectFill" Margin="20" Clicked="imagesec_Clicked"/>
+                        </Frame>
+                        </StackLayout>
+                        <Button x:Name="foto_but" TextColor="White" Margin="0,30,0,0" Text="Kaydet" BackgroundColor="#abd2ff" CornerRadius="5"  IsEnabled="False" Clicked="foto_but_Clicked"></Button>
+                    </StackLayout>
+                    
+                    
+                    <Button x:Name="sifre_gör" TextColor="White" Margin="0,30,0,0" Text="YEni şifre Belirleme" BackgroundColor="#abd2ff" CornerRadius="5" Clicked="sifre_gör_Clicked"></Button>
+                    <StackLayout x:Name="sifre_islem" IsVisible="false">
+                        <Frame Padding="10,0,10,0" BackgroundColor="Transparent" CornerRadius="20">
+                            <Entry x:Name="pass" IsPassword="True" Placeholder="Şuanki Şifrenizi giriniz:" TextChanged="pass_TextChanged"></Entry>
+                        </Frame>
+                        <Frame Padding="10,0,10,0" BackgroundColor="Transparent" CornerRadius="20">
+                            <Entry x:Name="newpass" IsPassword="True" Placeholder="Yeni Şifre Giriniz:"></Entry>
+                        </Frame>
+                        <Frame Padding="10,0,10,0" BackgroundColor="Transparent" CornerRadius="20">
+                            <Entry x:Name="repass" IsPassword="True" Placeholder="Yeni Şifreyi tekrar giriniz:"></Entry>
+                        </Frame>
+                        <Button x:Name="Sifre_but" TextColor="White" Text="Kaydet" BackgroundColor="#abd2ff" CornerRadius="5" IsEnabled="False" Clicked="Sifre_but_Clicked" Margin="30,30,30,0" ></Button>
+                    </StackLayout>
+                    
+                    
+                    <Button x:Name="sil_gör" TextColor="White" Margin="0,30,0,0" Text="HESAP SİLME" BackgroundColor="#abd2ff" CornerRadius="5" Clicked="sil_gör_Clicked"></Button>
+                    <StackLayout x:Name="sil_islem" IsVisible="false">
+                        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                            <CheckBox x:Name="check1" CheckedChanged="check1_CheckedChanged"/>
+                            <Label Text="Hesabınızı gerçekten silmek istiyor musunuz ?"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                            <CheckBox x:Name="check2"/>
+                            <Label Text="Yaptıgınız paylaşımlarıda silmek istiyor musunuz ?"/>
+                        </StackLayout>
+                        <Button x:Name="sil_but" TextColor="Red" Text="Hesabımı Sil" BackgroundColor="#abd2ff" CornerRadius="5" IsEnabled="False" Clicked="sil_but_Clicked"  Margin="30,30,30,0" ></Button>
+                    </StackLayout>
+                    
+                    
+                    
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

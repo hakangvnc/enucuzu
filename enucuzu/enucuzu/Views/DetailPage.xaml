@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="enucuzu.Views.DetailPage" BackgroundColor="#ebf3ff">
+    <ContentPage.Content>
+        <Frame Margin="20,40,20,40"  CornerRadius="20" BorderColor="#abd2ff" BackgroundColor="#ebf3ff">
+            <StackLayout VerticalOptions="Center" Spacing="20" Padding="10,10,10,50">
+            <Label Text="Ürün Detayları" FontSize="35" HorizontalOptions="Center" TextColor="#4e4b45"/>
+            <Frame x:Name="image_button_back" Padding="0,0,0,0" Margin="60,20,60,0" HeightRequest="130" BackgroundColor="#ebf3ff" CornerRadius="100" >
+                <Image x:Name="image" Source="usericon.png" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" WidthRequest="80"/>
+            </Frame>
+            <Frame Padding="10,0,10,0" BackgroundColor="Transparent" CornerRadius="20">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Barkod No :" FontSize="Body" FontAttributes="Bold"></Label>
+                    <Label x:Name="barkod"></Label>
+                </StackLayout>
+            </Frame>
+            <Frame Padding="10,0,10,0" BackgroundColor="Transparent" CornerRadius="20">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Ürün İsim :" FontSize="Body" FontAttributes="Bold"></Label>
+                    <Label x:Name="P_Name"></Label>
+                </StackLayout>
+            </Frame>
+            <Frame Padding="10,0,10,0" BackgroundColor="Transparent" CornerRadius="20">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Ürün Fiyatı :" FontSize="Body" FontAttributes="Bold"></Label>
+                    <Label x:Name="Price" ></Label>
+                </StackLayout>
+            </Frame>
+            <Frame Padding="10,0,10,0" BackgroundColor="Transparent" CornerRadius="20">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Market İsmi :" FontSize="Body" FontAttributes="Bold"></Label>
+                    <Label x:Name="Store_Name" ></Label>
+                </StackLayout>
+            </Frame>
+            <Frame Padding="10,0,10,0" BackgroundColor="Transparent" CornerRadius="20">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Ekleyen Kullanıcı :" FontSize="Body" FontAttributes="Bold"></Label>
+                    <Label x:Name="Kullanici" ></Label>
+                </StackLayout>
+            </Frame>
+            <Frame Padding="10,0,10,0" BackgroundColor="Transparent" CornerRadius="20">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Eklenme Tarihi :" FontSize="Body" FontAttributes="Bold"></Label>
+                    <Label x:Name="Date" ></Label>
+                </StackLayout>
+            </Frame>
+            <Button x:Name="Buton" Margin="0,30,0,0" Text="Takip Et" TextColor="White" Clicked="Follow_Click" BackgroundColor="DarkBlue" CornerRadius="5" FontAttributes="Bold" FontSize="Subtitle"></Button>
+        </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

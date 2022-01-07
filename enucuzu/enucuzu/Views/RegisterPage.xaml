@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="enucuzu.RegisterPage" BackgroundColor="#ebf3ff">
+    <ContentPage.Content>
+        <StackLayout Spacing="10" VerticalOptions="Center">
+            <Frame BackgroundColor="#c6e5ff" CornerRadius="10" Margin="40,0,40,0">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Orientation="Horizontal" Padding="10,-35,10,-20">
+                    <Label Text="en" FontSize="70" TextColor="#208cba" ></Label>
+                    <Label Text="ucuzu" FontSize="70" TextColor="White" Margin="-5,0,0,0"></Label>
+                </StackLayout>
+            </Frame>
+            <Frame BackgroundColor="#c6e5ff" CornerRadius="10" Margin="40,0,40,0" Padding="0,0,0,0">
+                <StackLayout VerticalOptions="Center" Spacing="20" Padding="30,30,30,50">
+                   
+                    <Label Text="Kayıt Ol" FontSize="35" HorizontalOptions="Center" TextColor="#4e4b45"/>
+                    <Frame x:Name="image_button_back" Padding="-5" Margin="60,0,60,0" HeightRequest="140" BackgroundColor="#ebf3ff" CornerRadius="100" >
+                        <ImageButton x:Name="image" Clicked="ImageButton_Clicked" Source="usericon.png" BackgroundColor="Transparent"  Aspect="AspectFill"/>
+                    </Frame>
+                    <Frame Padding="10,0,10,0" BackgroundColor="Transparent" CornerRadius="20">
+                        <Entry x:Name="username" Placeholder="Kullanıcı Adı :"></Entry>
+                    </Frame>
+                    <Frame Padding="10,0,10,0" BackgroundColor="Transparent" CornerRadius="20">
+                        <Entry x:Name="pass" IsPassword="True" Placeholder="Şifre giriniz:"></Entry>
+                    </Frame>
+                    <Frame Padding="10,0,10,0" BackgroundColor="Transparent" CornerRadius="20">
+                        <Entry x:Name="repass" IsPassword="True" Placeholder="Şifreyi  tekrar giriniz:"></Entry>
+                    </Frame>
+                    <Button Clicked="Button_Clicked" Margin="0,30,0,0" Text="Kayıt Ol" BackgroundColor="#abd2ff" CornerRadius="5"></Button>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="enucuzu.LoginPage" BackgroundColor="#ebf3ff">
+    <ContentPage.Content>
+        <StackLayout Spacing="10" VerticalOptions="Center">
+            <Frame BackgroundColor="#c6e5ff" CornerRadius="10" Margin="40,0,40,0">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Orientation="Horizontal" Padding="10,-35,10,-20">
+                    <Label Text="en" FontSize="70" TextColor="#208cba" ></Label>
+                    <Label Text="ucuzu" FontSize="70" TextColor="White" Margin="-5,0,0,0"></Label>
+                </StackLayout>
+            </Frame>
+            <Frame BackgroundColor="#c6e5ff" CornerRadius="10" Margin="40,0,40,0" Padding="0,0,0,0">
+                <StackLayout VerticalOptions="Center" Spacing="20" Padding="30,30,30,50">
+                    <Label Text="Giriş Yap" FontSize="35" HorizontalOptions="Center" TextColor="#4e4b45" Margin="0,0,0,30"/>
+                    <Frame Padding="10,0,10,0" BackgroundColor="Transparent" CornerRadius="20">
+                        <Entry x:Name="username" Placeholder="Kullanıcı Adı :"></Entry>
+                    </Frame>
+                    <Frame Padding="10,0,10,0" BackgroundColor="Transparent" CornerRadius="20">
+                        <Entry x:Name="pass" IsPassword="True" Placeholder="Şifre:"></Entry>
+                    </Frame>
+                    <Button Clicked="Login_Click" Margin="0,30,0,0" Text="Giriş Yap" BackgroundColor="#abd2ff" CornerRadius="5"></Button>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

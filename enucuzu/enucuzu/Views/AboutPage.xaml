@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="enucuzu.AboutPage" BackgroundColor="#ebf3ff">
+
+
+    <StackLayout Spacing="10" HorizontalOptions="Center"  Margin="5,10,5,0">
+        <Frame BackgroundColor="#c6e5ff" CornerRadius="10" Margin="10,0,10,0">
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Orientation="Horizontal" Padding="10,-35,10,-20">
+                <Label Text="en" FontSize="70" TextColor="#208cba" ></Label>
+            <Label Text="ucuzu" FontSize="70" TextColor="White" Margin="-5,0,0,0"></Label>
+        </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="#c6e5ff" CornerRadius="10" Margin="10,0,10,0">
+            <ScrollView>
+                <StackLayout>
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10" Padding="0,0,0,50">
+                        <Label Text="Tanıtım" FontSize="40" HorizontalOptions="Center" TextColor="#4e4b45" ></Label>
+                        <Label TextColor="Black" FontSize="18" Text="Günümüzde artan rekabetle birlikte gittikçe önem kazanan kavramlardan biri de stok yönetimidir. Dengeli bir stok yönetimi işletmelerin, maliyetlerini azaltırken müşteri tatminini sağlamaları için önem arz etmektedir. İşletmelerin dengeli bir stok yönetimi uygulayabilmeleri için öncelikle stokta bulunması gereken hammadde veya yedek parçalarını sınıflandırmaları gerekmektedir. ABC analizi bu sınıflandırma yöntemlerinden biridir. ABC analizi parçanın parasal envanter değerini göz önünde bulundurarak sınıflandırma yapmaktadır. Ancak özellikle yoğun makine, teçhizat kullanımı gerçekleştirilen ve hizmet üretimi yapılan işletmelerde yalnızca envanter değerine göre sınıflandırma yapmak stok yönetimini yetersiz kılabilmektedir. Bulanık sınıflandırma ile stokta bulundurulacak parçaların sınıflandırılmasına envanter değerinin yanı sıra etki eden diğer kriterler de dahil edilebilmektedir. Çalışmada örnek bir konteyner terminalinde kullanılan ekipmanlara ait yedek parçaların ve malzemelerin stok yönetimi incelenmektedir. Parça ve malzemeler, öncelikli olarak envanter değerlerine göre ABC Analizi ile sınıflandırılmış, ardından çeşitli kriterler çalışmaya dahil edilerek bulanık sınıflandırma ile yeniden sınıflandırılmıştır. Çalışmanın sonunda ABC Analizi ve bulanık sınıflandırmaya göre sonuçlar karşılaştırılmış ve öneriler sunulmuştur."></Label>
+                    </StackLayout>
+                    <ScrollView Orientation="Horizontal">
+                        <StackLayout Margin="10" Orientation="Horizontal" Spacing="10">
+                            <Image Source="tanitim1.jpg" WidthRequest="300"></Image>
+                            <Image Source="tanitim2.jpg" WidthRequest="300"></Image>
+                            <Image Source="tanitim3.jpg" WidthRequest="300"></Image>
+                            <Image Source="tanitim5.jpg" WidthRequest="300"></Image>
+                            <Image Source="tanitim4.jpg" WidthRequest="300"></Image>
+                            <Image Source="tanitim6.jpg" WidthRequest="300"></Image>
+                        </StackLayout>
+                    </ScrollView>
+            </StackLayout>
+            </ScrollView>
+        </Frame>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Clicked="Login_Clicked"  Text="Giriş Yap" FontSize="16" Font="Bold" TextColor="Black" Margin="10,0,10,15" Padding="40,10,40,10" CornerRadius="5" BackgroundColor="#abd2ff"></Button>
+            <Button Clicked="Sign_Clicked" Text="Kayıt Ol" FontSize="16" Font="Bold" TextColor="Black" Margin="10,0,10,15" Padding="40,10,40,10" CornerRadius="5" BackgroundColor="#abd2ff"></Button>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:gv="clr-namespace:GoogleVisionBarCodeScanner;assembly=BarcodeScanner.XF"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="enucuzu.Views.AddProduct">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="20" Padding="30,10,30,50">
+            <Label Text="Ürün Ekleme" FontSize="35" HorizontalOptions="Center" TextColor="#4e4b45"/>
+            <Frame x:Name="image_button_back" Padding="0,0,0,0" Margin="60,20,60,0" HeightRequest="130" BackgroundColor="#ebf3ff" CornerRadius="100" >
+                <ImageButton x:Name="image" Clicked="image_Clicked" Source="usericon.png" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" WidthRequest="80"/>
+            </Frame>
+            <StackLayout Orientation="Horizontal" Spacing="0" Padding="0" >
+                <Frame Padding="10,0,10,0" BackgroundColor="Transparent" CornerRadius="20">
+                    <Entry x:Name="barkod" Keyboard="Numeric" Placeholder="Barkod No :" WidthRequest="250"></Entry>
+                </Frame>
+                <Frame x:Name="barkod_back" Padding="0,0,0,0" Margin="0" WidthRequest="40" BackgroundColor="#ebf3ff" CornerRadius="100" >
+                    <ImageButton Source="barkod.png" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" WidthRequest="40" HeightRequest="30" Clicked="Barkod_Clicked"/>
+                </Frame>
+            </StackLayout>
+            <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="false" x:Name="Scanframe" CornerRadius="15" BorderColor="#abd2ff" Padding="0">
+                <RelativeLayout>
+                    <gv:CameraView x:Name="Scanner" IsEnabled="False" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="250" DefaultTorchOn="False" OnDetected="CameraView_OnDetected"  VibrationOnDetected="False" RequestedFPS="30" ScanInterval="500">
+                    </gv:CameraView>
+                </RelativeLayout>
+            </Frame>
+            <Frame Padding="10,0,10,0" BackgroundColor="Transparent" CornerRadius="20">
+                <Entry x:Name="P_Name" Placeholder="Ürün Adı :" Keyboard="Text"></Entry>
+            </Frame>
+            <Frame Padding="10,0,10,0" BackgroundColor="Transparent" CornerRadius="20">
+                <Entry x:Name="Price" Keyboard="Numeric" Placeholder="Fiyat :"></Entry>
+            </Frame>
+            <Frame Padding="10,0,10,0" BackgroundColor="Transparent" CornerRadius="20">
+                <Entry x:Name="Store_Name" Keyboard="Text" Placeholder="Market İsmi :"></Entry>
+            </Frame>
+            <Button Margin="0,30,0,0" Text="Ürünü Kaydet" BackgroundColor="#abd2ff" CornerRadius="5" Clicked="Button_Clicked" TextColor="White"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
